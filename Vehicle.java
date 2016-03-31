@@ -1,11 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package sada;
-
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -15,16 +7,16 @@ abstract class Vehicle {
 
 	/** The Constant VEHICLE_WIDTH. */
 	public static final int VEHICLE_WIDTH = 75;
-	
+
 	/** The Constant VEHICLE_HEIGHT. */
 	public static final int VEHICLE_HEIGHT = 50;
-	
+
 	/** The x position */
 	public int x;
-	
+
 	/** The y position */
 	public int y;
-	
+
 	/** The previous vehicle's */
 	public Vehicle next, previous;
 
@@ -32,16 +24,16 @@ abstract class Vehicle {
 	/**
 	 * Instantiates a new vehicle.
 	 *
-	 * @param xPos the x pos
-	 * @param yPos the y pos
+	 * @param xPos the x position
+	 * @param yPos the y position
 	 * @param next the next vehicle
 	 */
 	public Vehicle(int xPos, int yPos) {
 		x = xPos;
 		y = yPos;
-	
+
 	}
-	
+
 	/**
 	 * Draws the method
 	 *
@@ -68,11 +60,11 @@ abstract class Vehicle {
 	 *
 	 * @return the next
 	 */
-        
-       abstract public void setBox(StackBoxes box);
-        
-       abstract public StackBoxes getBox();
-        
+
+	abstract public void setBox(StackBoxes box);
+
+	abstract public StackBoxes getBox();
+
 	abstract public Vehicle getN();
 
 	/**

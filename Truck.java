@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package sada;
+
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -21,25 +21,25 @@ public class Truck extends Vehicle {
 
 	/** The Constant WIDTH. */
 	private static final double WIDTH = 35 ;
-	
+
 	/** The Constant UNIT. */
 	private static final double UNIT = WIDTH / 7 ;
-	
+
 	/** The Constant U_3. */
 	private static final double U_3 = 0.3 * UNIT ; 
-	
+
 	/** The Constant U3. */
 	private static final double U3 = 3 * UNIT ; 
-	
+
 	/** The Constant U4. */
 	private static final double U4 = 4 * UNIT ; 
-	
+
 	/** The Constant U10. */
 	private static final double U10 = 10 * UNIT ; 
-	
+
 	/** The Constant U10_7. */
 	private static final double U10_7 = 10.7 * UNIT ; 
-	
+
 	/** The Constant U12. */
 	private static final double U12 = 12 * UNIT ; 	
 
@@ -50,7 +50,8 @@ public class Truck extends Vehicle {
 	 * @param xPos the x pos
 	 * @param yPos the y pos
 	 */
-	public Truck(int xPos, int yPos) {
+	public Truck(int xPos, int yPos)
+	{
 		super(xPos, yPos);
 	}
 
@@ -59,7 +60,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @return the rect
 	 */
-	public Rectangle getRect() {
+	public Rectangle getRect() 
+	{
 		return new Rectangle(x, y, VEHICLE_WIDTH, VEHICLE_HEIGHT);
 	}
 
@@ -68,7 +70,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @return true, if has next
 	 */
-	public boolean hasN() {
+	public boolean hasN()
+	{
 		return (next != null);  //Inherited from child class
 	}
 
@@ -77,7 +80,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @return the next
 	 */
-	public Vehicle getN() {
+	public Vehicle getN()
+	{
 		if(!hasN()) return null;
 		else return next;
 	}
@@ -87,7 +91,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @param next the new next
 	 */
-	public void setN(Vehicle next) {
+	public void setN(Vehicle next) 
+	{
 		this.next = next;
 	}
 
@@ -96,7 +101,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @return true, if has previous
 	 */
-	public boolean hasP() {
+	public boolean hasP()
+	{
 		return (previous != null);
 	}
 
@@ -105,7 +111,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @return the previous
 	 */
-	public Vehicle getP() {
+	public Vehicle getP()
+	{
 		if(!hasP()) return null;
 		else return previous;
 	}
@@ -115,7 +122,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @param previous the new previous
 	 */
-	public void setP(Vehicle previous) {
+	public void setP(Vehicle previous)
+	{
 		this.previous = previous;
 	}
 
@@ -125,7 +133,8 @@ public class Truck extends Vehicle {
 	 * @param x the x
 	 * @param y the y
 	 */
-	public void moveTo(int x, int y) {
+	public void moveTo(int x, int y) 
+	{
 		this.x = x;
 		this.y = y;
 	}
@@ -135,7 +144,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @return true, if is truck
 	 */
-	public boolean isTruck() {
+	public boolean isTruck() 
+	{
 		return true;
 	}
 
@@ -144,7 +154,8 @@ public class Truck extends Vehicle {
 	 *
 	 * @return the x
 	 */
-	public int getX() {
+	public int getX() 
+	{
 		return x;
 	}
 
@@ -153,21 +164,23 @@ public class Truck extends Vehicle {
 	 *
 	 * @return the y
 	 */
-	public int getY() {
+	public int getY() 
+	{
 		return y;
 	}
 
 	/**
-	 * Draws the method
+	 * Draws method to draw the truck
 	 *
 	 * @param g2 the graphic
 	 */
-	public void draw(Graphics2D g2) {
-            
+	public void draw(Graphics2D g2)
+	{
+
 		int x1 = x;
 		int y1 = y;
 		Rectangle2D.Double hood = new Rectangle2D.Double(x1, y1 + UNIT, U3, U3 ) ; //draws the hood 
-                
+
 		g2.setColor(Color.red) ;
 		g2.fill(hood) ;
 
@@ -203,14 +216,16 @@ public class Truck extends Vehicle {
 		}
 	}
 
-    @Override
-    public void setBox(StackBoxes box) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public void setBox(StackBoxes box)
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //throws unsupported operation exception
+	}
 
-    @Override
-    public StackBoxes getBox() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public StackBoxes getBox() 
+	{
+		throw new UnsupportedOperationException("Not supported yet."); //Throw unsupported operation exception
+	}
 
 }
